@@ -395,41 +395,49 @@ body::-webkit-scrollbar-thumb:hover{
     padding:32px 18px 20px;
     border-radius:24px;
   }
+
   .profile-pic{
     width:140px;
     height:140px;
     margin-bottom:14px;
   }
+
   .name{
-    font-size:2.4rem;
+    font-size:2rem;      /* 🔥 smaller title on mobile */
+    line-height:1.1;
     margin-bottom:6px;
   }
+
   .bio{
     font-size:1rem;
     margin:6px auto 18px;
   }
+
   .socials{
     gap:14px;
     margin-bottom:20px;
   }
+
   .socials a img{
     width:40px;
     height:40px;
     padding:8px;
   }
+
   .links{
     gap:14px;
   }
+
   .holo-card{
     padding:14px 16px;
     font-size:.95rem;
     border-radius:20px;
   }
+
   .glass-footer{
     margin-top:22px;
-    padding:8px 12px;
-  }
-}
+    padding:8
+
 /* Mobile title size fix */
 @media (max-width: 720px) {
   .name {
