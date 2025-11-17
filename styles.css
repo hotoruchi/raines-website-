@@ -135,7 +135,7 @@ body::-webkit-scrollbar-thumb:hover{
 }
 
 .name{
-  font-family:'Bargeno',serif;
+  font-family: 'Dela Gothic One', cursive;
   font-size:3rem; line-height:1.05; margin-bottom:10px;
   color:var(--fg);
   text-shadow:0 0 16px var(--halo1), 0 0 38px var(--halo2);
