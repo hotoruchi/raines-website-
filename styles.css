@@ -10,11 +10,14 @@
   --hover2:#c4b5fd;
 }
 
-html,body{
+html, body{
   height:100%;
+  /* base scrollbar styling (Firefox + others that respect it) */
+  scrollbar-width: thin;
+  scrollbar-color: var(--hover2) rgba(255,255,255,0.12);
 }
 
-/* BODY LAYOUT + SCROLLBAR */
+/* BODY LAYOUT */
 body{
   font-family:'Montserrat',system-ui,-apple-system,Segoe UI,Roboto,Inter,sans-serif;
   color:var(--fg);
@@ -22,34 +25,34 @@ body{
   background: transparent;
   min-height:100vh;
 
-  /* scrolling */
   overflow-x:hidden;
   overflow-y:auto;
-
-  /* cute pastel scrollbar base (Firefox) */
-  scrollbar-width: thin;
-  scrollbar-color: var(--hover2) rgba(255,255,255,0.12);
 }
 
-/* WebKit scrollbars (Chrome / Edge / etc.) */
+/* WebKit scrollbars (Chrome / Edge / Brave / etc.) */
+html::-webkit-scrollbar,
 body::-webkit-scrollbar{
   width: 10px;
 }
 
+html::-webkit-scrollbar-track,
 body::-webkit-scrollbar-track{
   background: rgba(255,255,255,0.05);
   border-radius: 999px;
 }
 
+html::-webkit-scrollbar-thumb,
 body::-webkit-scrollbar-thumb{
   border-radius: 999px;
   background: linear-gradient(180deg, var(--hover1), var(--hover2));
   box-shadow: 0 0 8px rgba(255,255,255,0.6);
 }
 
+html::-webkit-scrollbar-thumb:hover,
 body::-webkit-scrollbar-thumb:hover{
   background: linear-gradient(180deg, var(--hover2), #e5d9ff);
 }
+
 
 /* ===== Animated holographic background: 3 layered textures ===== */
 .bg-layer{
@@ -262,4 +265,54 @@ body::-webkit-scrollbar-thumb:hover{
   .name{ font-size:3.4rem }
   .bio{ font-size:1.2rem }
   .container{ padding:54px 34px 26px }
+}
+/* 📱 Mobile tweaks */
+@media (max-width: 720px){
+  .container{
+    margin: 40px 14px 28px;
+    padding: 32px 18px 20px;
+    border-radius: 24px;
+  }
+
+  .profile-pic{
+    width: 140px;
+    height: 140px;
+    margin-bottom: 14px;
+  }
+
+  .name{
+    font-size: 2.4rem;
+    margin-bottom: 6px;
+  }
+
+  .bio{
+    font-size: 1rem;
+    margin: 6px auto 18px;
+  }
+
+  .socials{
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+
+  .socials a img{
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+  }
+
+  .links{
+    gap: 14px;
+  }
+
+  .holo-card{
+    padding: 14px 16px;
+    font-size: 0.95rem;
+    border-radius: 20px;
+  }
+
+  .glass-footer{
+    margin-top: 22px;
+    padding: 8px 12px;
+  }
 }
