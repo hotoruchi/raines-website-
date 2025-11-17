@@ -433,7 +433,7 @@ body::-webkit-scrollbar-thumb:hover{
 /* Mobile title size fix */
 @media (max-width: 720px) {
   .name {
-    font-size: 2.2rem;   /* was 3-3.4rem */
+    font-size: 1.8rem;   /* was 3-3.4rem */
     line-height: 1.1;
   }
 }
