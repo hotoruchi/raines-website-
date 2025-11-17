@@ -430,7 +430,13 @@ body::-webkit-scrollbar-thumb:hover{
     padding:8px 12px;
   }
 }
-
+/* Mobile title size fix */
+@media (max-width: 720px) {
+  .name {
+    font-size: 2.2rem;   /* was 3-3.4rem */
+    line-height: 1.1;
+  }
+}
 /* desktop upscaling */
 @media (min-width:720px){
   .name{font-size:3.4rem;}
